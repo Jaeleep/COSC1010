@@ -1,0 +1,32 @@
+#
+# Jae Lee Park
+# Sep 8, 2024
+# Sales Tax Programming Project
+# COSC 2409 DNT
+#
+
+# Variable declarations
+
+# Constants for the state and county tax rates
+
+# Get the amount of the purchase.
+amountofpurchase = float(input('Enter the amount of purchase:'))
+
+# Calculate the state sales tax.
+state_tax = amountofpurchase * 0.05
+
+# Calculate the county sales tax.
+county_tax = amountofpurchase * 0.025
+
+# Calculate the total tax.
+total_tax = state_tax + county_tax
+
+# Calculate the total of the sale.
+total_sale = amountofpurchase + total_tax
+
+# Print information about the sale.
+print('Amount of purchase $' + format(amountofpurchase, ',.2f'),\
+    'State tax: $' + format(state_tax ,',.2f'),\
+    'County tax: $' + format(county_tax ,',.2f'),\
+    'Total tax: $' + format(total_tax ,',.2f'),\
+    'Total sale: $' + format(total_sale ,',.2f'), sep = '\n')
