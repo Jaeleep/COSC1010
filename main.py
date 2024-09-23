@@ -1,40 +1,17 @@
 #
 # Jae Lee Park
-# Sep 14,2024
-# Areas of Rectangles Programming Project
+# Sep 17, 2024
+# Bug Collector Programming Project
 # COSC 2409 DNT
 #
-# Local variables
-lenghthA = 0 # The length of rectangle A
-widthA = 0 # The width of rectangle A
-lengthB = 0 # The length of rectagnle B
-widthB = 0 # The width of rectangle B
-areaA = 0 # The area of rectangle A
-areaB = 0 # The area of rectangle B
+# Initialize variables for bugs and total number of bugs collected.
+total_bugs = 0 
 
-# Get length A
-lengthA = float(input('Engter the length of rectangle A: '))
+# Get number of bugs collected each day using a for loop.
+for  day in range(1, 6):
+    print('Enter the bugs collected on day', day)
+    bugs = int(input())
+    total_bugs += bugs
 
-# Get width A
-widthA = float(input('Engter the width of rectangle A: '))
-
-# Get length B
-lengthB = float(input('Engter the length of rectangle B: '))
-
-# Get width B
-widthB = float(input('Engter the width of rectangle B: '))
-
-# Calculate area A
-areaA = lengthA * widthA
-
-# Calculate area B
-areaB = lengthB * widthB
-
-# Print area comparison using if-elif-else statements
-if areaA > areaB:
-    print('\nRectangle A has a greater area.')
-elif areaB > areaA:
-    print('\nRectangle B has a greater area.')
-else:
-    print('\n4
-    Both rectangles have the same area.')
+# Display the total number of bugs collected.
+print(f'Total number of bugs collected over 5 days: {total_bugs}')
