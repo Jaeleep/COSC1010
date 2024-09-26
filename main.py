@@ -1,39 +1,23 @@
 #
 # Jae Lee Park
-# Sep 14,2024
-# Areas of Rectangles Programming Project
+# Sep 26, 2024
+# Feet to Inches Programming Project
 # COSC 2409 DNT
 #
-# Local variables
-lengthA = 0 # The length of rectangle A
-widthA = 0 # The width of rectangle A
-lengthB = 0 # The length of rectangle B
-widthB = 0 # The width of rectangle B
-areaA = 0 # The area of rectangle A
-areaB = 0 # The area of rectangle B
+# Use comments liberally throughout the program.
 
-# Get length A
-lengthA = float(input('Enter the length of rectangle A: '))
+#Initialize the conversion factor
+inches_per_foot = 12
 
-# Get width A
-widthA = float(input('Enter the width of rectangle A: '))
+# Function to convert feet to inches
+def feet_to_inches(feet):
+    return feet * inches_per_foot
 
-# Get length B
-lengthB = float(input('Enter the length of rectangle B: '))
+# Get the number of feet from the user
+feet = int(input('Enter the number of feet: '))
 
-# Get width B
-widthB = float(input('Enter the width of rectangle B: '))
+# Calculate the distance in inches using the conversion function
+inches = feet_to_inches(feet)
 
-# Calculate area A
-areaA = lengthA * widthA
-
-# Calculate area B
-areaB = lengthB * widthB
-
-# Print area comparison using if-elif-else statements
-if areaA > areaB:
-    print('\nRectangle A has a greater area.')
-elif areaB > areaA:
-    print('\nRectangle B has a greater area.')
-else:
-    print('\nBoth rectangles have the same area.')
+# Display the result
+print(feet, 'feet equals', inches, 'inches')
