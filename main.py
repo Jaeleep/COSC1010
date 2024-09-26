@@ -1,34 +1,39 @@
 #
 # Jae Lee Park
-# Sep 22, 2024
-# Budget Analysis Programming Project
+# Sep 14,2024
+# Areas of Rectangles Programming Project
 # COSC 2409 DNT
 #
-# Use comments liberally throughout the program. 
-#Get the budgeted amount from the user.
-budget = float(input('Enter the amount you have budgeted for the month:'))
+# Local variables
+lengthA = 0 # The length of rectangle A
+widthA = 0 # The width of rectangle A
+lengthB = 0 # The length of rectangle B
+widthB = 0 # The width of rectangle B
+areaA = 0 # The area of rectangle A
+areaB = 0 # The area of rectangle B
 
-# Initialize total expenses
-budget = 0
-total_expenses = 0
-expense = 0
+# Get length A
+lengthA = float(input('Enter the length of rectangle A: '))
 
+# Get width A
+widthA = float(input('Enter the width of rectangle A: '))
 
-# Ask the user to enter expenses and keep a running total
-while True:
-    expense = float(input('Enter an expense (or enter 0 to finish): '))
+# Get length B
+lengthB = float(input('Enter the length of rectangle B: '))
 
-    if expense == 0:
-        break
-    total_expenses += expense
+# Get width B
+widthB = float(input('Enter the width of rectangle B: '))
 
-# Calculate if the user is over or under budget.
-difference = budget - total_expenses
+# Calculate area A
+areaA = lengthA * widthA
 
-# Display the results to the user.
-if difference > 0:
-    print('You are under budget by $', round(difference, 2))
-elif difference < 0:
-    print('You are over budget by $', round(-difference, 2))
+# Calculate area B
+areaB = lengthB * widthB
+
+# Print area comparison using if-elif-else statements
+if areaA > areaB:
+    print('\nRectangle A has a greater area.')
+elif areaB > areaA:
+    print('\nRectangle B has a greater area.')
 else:
-    print('You have exactly met your budget.')
+    print('\nBoth rectangles have the same area.')
