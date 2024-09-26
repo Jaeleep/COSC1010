@@ -9,17 +9,18 @@
 budget = float(input('Enter the amount you have budgeted for the month:'))
 
 # Initialize total expenses
+budget = 0
 total_expenses = 0
+expense = 0
+
 
 # Ask the user to enter expenses and keep a running total
-more_expenses = 'y'
+while True:
+    expense = float(input('Enter an expense (or enter 0 to finish): '))
 
-while more_expenses.lower() == 'y':
-    expense = float(input('Enter an expensse: '))
+    if expense == 0:
+        break
     total_expenses += expense
-
-    # Ask the user if they want to add another expense.
-    more_expenses = input('Do you want to add another expense?: Type y for yes, n for no: ')
 
 # Calculate if the user is over or under budget.
 difference = budget - total_expenses
