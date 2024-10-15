@@ -1,34 +1,26 @@
 #
 # Jae Lee Park
-# Sep 22, 2024
-# Budget Analysis Programming Project
+# Sep 26, 2024
+# Feet to Inches Programming Project
 # COSC 2409 DNT
 #
-# Use comments liberally throughout the program. 
-# Initialize total expenses
-budget = 0
-total_expenses = 0
-expense = 0
+# Use comments liberally throughout the program.
 
-#Get the budgeted amount from the user.
-budget = float(input('Enter the amount you have budgeted for the month:'))
+#Initialize the conversion factor
+inches_per_foot = 12
+feet = 0
+inches = 0
 
 
-# Ask the user to enter expenses and keep a running total
-while True:
-    expense = float(input('Enter an expense (or enter 0 to finish): '))
+# Function to convert feet to inches
+def feet_to_inches(feet):
+    return feet * inches_per_foot
 
-    if expense == 0:
-        break
-    total_expenses += expense
+# Get the number of feet from the user
+feet = int(input('Enter the number of feet: '))
 
-# Calculate if the user is over or under budget.
-difference = budget - total_expenses
+# Calculate the distance in inches using the conversion function
+inches = feet_to_inches(feet)
 
-# Display the results to the user.
-if difference > 0:
-    print('You are under budget by $', round(difference, 2))
-elif difference < 0:
-    print('You are over budget by $', round(-difference, 2))
-else:
-    print('You have exactly met your budget.')
+# Display the result
+print(feet, 'feet equals', inches, 'inches')
