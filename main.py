@@ -1,22 +1,31 @@
 #
-# Jae Lee Park
-# Oct 15, 2024
-# File Display Programming Project
+# Jae Lee park
+# Oct 14, 2024
+# Average of Numbers Programming Project
 # COSC 2409 DNT
 #
 # Use comments liberally throughout the program. 
-# Declare all local variables
+# Declare local varaibles
 myfile = 0
 line = 0
 number = 0
+total = 0
+count = 0
 
-# Open the file.
+# Open the file
 myfile = open('numbers.txt', 'r')
 
-# Read and display the file's contents.
+# Read each lin in the file and calculate total and count
 for line in myfile:
     number = int(line)
-    print(number)
+    total += number
+    count += 1
 
-# Closse the file.
+# Calculate the average if count is greater than 0.
+if count > 0:
+    average = total / count
+    print('The average of the numbers is:', average)
+
+
+# Close the file.
 myfile.close()
